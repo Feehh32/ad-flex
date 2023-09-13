@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0 8px;
+  position: relative;
 }
 
 input[type="search"] {
@@ -15,6 +16,19 @@ input[type="search"] {
   font-size: 1rem;
   transition: all 0.3s;
   padding: 0 16px;
+}
+
+.main__search::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../../img/icones/lupa.svg");
+  position: absolute;
+  bottom: 0;
+  grid-column: 2;
+  right: 40px;
+  bottom: 6px;
 }
 
 input[type="search"]:focus {
@@ -30,4 +44,30 @@ input[type="search"]:focus {
   justify-content: center;
   gap: 40px;
   margin-bottom: 120px;
+}
+
+@media (max-width: 800px) {
+  .main__clients {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+}
+
+@media (max-width: 500px) {
+  .main__search {
+    grid-template-columns: 1fr;
+    gap: 20px 0;
+  }
+
+  .main__search::after {
+    bottom: 14px;
+  }
+
+  input[type="search"] {
+    padding: 16px;
+  }
+
+  .main__clients {
+    flex-wrap: wrap;
+  }
 }
