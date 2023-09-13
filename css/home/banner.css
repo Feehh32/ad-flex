@@ -1,0 +1,23 @@
+.banner {
+  display: block;
+  background: url("../../img/banner/banner.jpg");
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+@media (max-width: 800px) {
+  .banner {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    display: none;
+  }
+}

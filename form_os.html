@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/svg+xml">
+    <title>AD flex | Inserir nova O.S </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="background">
+    <header class="header-bg">
+        <div class="header container">
+            <a href="./" class="header__logo">
+                <img src="./img/Logo-colorida.svg" width="128" height="33" alt="AD Flex">
+            </a>
+            <nav aria-label="primaria">
+                <ul class="header__menu font-p-s-b color-0">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./clientes.html">Clientes</a></li>
+                    <li><a href="./ordens-de-servico.html">Ordens de Serviço</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="font-p-xl-b color-0 form-titulo titulo__principal">Insira aqui sua nova O.S<span
+                    class="color-prim2">.</span></h1>
+        </div>
+        <form class="os-add" action="/">
+            <div class="os-add__client">
+                <div>
+                    <label class="font-p-s-b" for="client">Selecione o Cliente</label>
+                    <select name="client" id="client" name="client" required></select>
+                </div>
+                <div>
+                    <label class="font-p-s-b" for="amount">Quantidade de serviço</label>
+                    <input type="number" id="amount" name="amount" required
+                        placeholder="Coloque apenas o número. Ex: 3">
+                    <button class="adicionar font-r-l-b color-12" type="button">adicionar</button>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service__thickness">
+                    <label for="thickness__label" class="font-p-s-b">Escolher espessura</label>
+                    <div>
+                        <input type="radio" name="thickness" value="1.14" id="1.14">
+                        <label for="1.14" class="font-r-m-b">1.14</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="thickness" value="1.70" id="1.70">
+                        <label for="1.70" class="font-r-m-b">1.70</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="thickness" value="2.84" id="2.84">
+                        <label for="2.84" class="font-r-m-b">2.84</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="thickness" value="3.94" id="3.94">
+                        <label for="3.94" class="font-r-m-b">3.94</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="thickness" value="4.94" id="4.94">
+                        <label for="thickness" class="font-r-m-b">4.94</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="thickness" value="6.35" id="6.35">
+                        <label for="thickness" class="font-r-m-b">6.35</label>
+                    </div>
+                </div>
+                <div>
+                    <label class="font-p-s-b" for="serviceName">Nome do serviço</label>
+                    <input type="text" name="serviceName" id="serviceName" required>
+                </div>
+                <div>
+                    <label class="font-p-s-b" for="serviceAmount">Quantidade de peças</label>
+                    <input type="text" name="serviceAmount" id="serviceAmount" required>
+                </div>
+                <div class="service__measure">
+                    <label class="font-p-s-b" for="measures">Medidas</label>
+                    <div id="measures">
+                        <input type="text" id="width" name="amount" required placeholder="Largura" required>
+                        <input type="text" id="height" name="amount" required placeholder="Altura" required>
+                    </div>
+                </div>
+            </div>
+            <button class="enviar font-r-l-b color-prim5">Inserir O.S</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <img src="./img/Logo-colorida.svg" width="128" height="33" alt="logo da AD Flex">
+            <h4 class="font-p-m-b color-0">Contato:</h4>
+            <span class="font-r-xs color-3">Desenvolvido por Fernando Pereira - Alguns direitos reservados.</span>
+            <p class="font-r-l color-3">adm.xavier@hotmail.com</p>
+            <p class="font-r-l color-3">(99) 9 9999-9999 / (99) 9 9999-9999</p>
+        </div>
+    </footer>
+</body>
+
+</html>

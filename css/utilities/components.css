@@ -1,0 +1,16 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#background {
+  background: linear-gradient(var(--color-10) 700px, var(--color-1) 0);
+}
+
+@media (max-width: 600px) {
+  .titulo__principal {
+    font-size: 2rem;
+  }
+}

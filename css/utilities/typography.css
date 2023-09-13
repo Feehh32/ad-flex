@@ -1,0 +1,81 @@
+/* IBM PLex Mono */
+
+.font-os-xl-b {
+  font: 600 1.5rem/1.5 "IBM Plex Mono", monospace;
+}
+
+.font-os-l-b {
+  font: 600 1.25rem/1.5 "IBM Plex Mono", monospace;
+}
+
+.font-os-l {
+  font: 400 1.25rem/1.5 "IBM Plex Mono", monospace;
+}
+
+.font-os-m {
+  font: 400 1rem/1.5 "IBM Plex Mono", monospace;
+}
+
+.font-os-m-b {
+  font: 600 1rem/1.5 "IBM Plex Mono", monospace;
+}
+
+.font-os-s {
+  font: 400 0.875rem/1.5 "IBM Plex Mono", monospace;
+}
+
+.font-os-s-b {
+  font: 600 0.875rem/1.5 "IBM Plex Mono", monospace;
+}
+
+.font-os-xs {
+  font: 400 0.75rem/1.35 "IBM Plex Mono", monospace;
+}
+
+.font-os-xs-b {
+  font: 600 0.75rem/1.35 "IBM Plex Mono", monospace;
+}
+
+.font-os-xxs {
+  font: 400 0.625rem/1.35 "IBM Plex Mono", monospace;
+}
+
+/* Poppins */
+
+.font-p-xl-b {
+  font: 500 4rem/1.125 "Poppins", sans-serif;
+}
+
+.font-p-m-b {
+  font: 500 1.5rem/1.5 "Poppins", sans-serif;
+}
+
+.font-p-s-b {
+  font: 500 1.125rem/1.33 "Poppins", sans-serif;
+}
+
+/* Roboto */
+
+.font-r-l-b {
+  font: 500 1.125rem/1.33 "Roboto", sans-serif;
+}
+
+.font-r-l {
+  font: 400 1.125rem/1.33 "Roboto", sans-serif;
+}
+
+.font-r-m-b {
+  font: 500 1rem/1.5 "Roboto", sans-serif;
+}
+
+.font-r-m-b {
+  font: 500 1rem/1.5 "Roboto", sans-serif;
+}
+
+.font-r-s {
+  font: 400 0.875rem/1.5 "Roboto", sans-serif;
+}
+
+.font-r-xs {
+  font: 400 0.625rem/1.35 "Roboto", sans-serif;
+}
