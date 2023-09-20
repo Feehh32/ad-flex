@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/svg+xml">
+    <title>AD flex | Inserir nova O.S </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        document.documentElement.classList.add('js')
+    </script>
+</head>
+
+<body id="background">
+    <header class="header-bg">
+        <div class="header container">
+            <a href="./" class="header__logo">
+                <img src="./img/Logo-colorida.svg" width="128" height="33" alt="AD Flex">
+            </a>
+            <nav aria-label="primaria">
+                <ul class="header__menu font-p-s-b color-0">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./clients.html">Clientes</a></li>
+                    <li><a href="./pagina_os.html">Ordens de Serviço</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <h1 class="main__title formClient-title fadeInLeft" data-anime="200">Insira aqui um novo Cliente<span
+                class="color-prim2">.</span></h1>
+        <form action="./" class="client-add fadeInUp" data-anime="400">
+            <div>
+                <label class="font-p-s-b" for="nameClient">Nome do Cliente</label>
+                <input class="input-pattern" type="text" id="nameClient" name="nameClient"
+                    placeholder="Digite aqui o nome do cliente" required>
+            </div>
+            <div>
+                <label class="font-p-s-b" for="email1">Email 1</label>
+                <input class="input-pattern" type="email" id="email1" name="email1" placeholder="client@email.com"
+                    required>
+            </div>
+            <div>
+                <label class="font-p-s-b" for="email2">Email 2</label>
+                <input class="input-pattern" type="email" id="email2" name="email2" placeholder="client@email.com">
+            </div>
+            <div>
+                <label class="font-p-s-b" for="tel1">Telefone 1</label>
+                <input class="input-pattern" type="tel" id="tel1" name="tel1" placeholder="(99) 999999999" required>
+            </div>
+            <div>
+                <label class="font-p-s-b" for="tel2">Telefone 2</label>
+                <input class="input-pattern" type="tel" id="tel2" name="tel2" placeholder="(99) 999999999">
+            </div>
+            <div>
+                <label class="font-p-s-b" for="charge">Cálculo de cobrança</label>
+                <input class="input-pattern" type="number" id="charge" name="charge" required>
+            </div>
+            <button type="submit" class="btn font-r-l-b">Adicionar</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <img src="./img/Logo-colorida.svg" width="128" height="33" alt="logo da AD Flex">
+            <h4 class="font-p-m-b color-0">Contato:</h4>
+            <span class="font-r-xs color-3">Desenvolvido por Fernando Pereira - Alguns direitos reservados.</span>
+            <p class="font-r-l color-3">adm.xavier@hotmail.com</p>
+            <p class="font-r-l color-3">(99) 9 9999-9999 / (99) 9 9999-9999</p>
+        </div>
+    </footer>
+    <script src="./js/plugin/simple-anime.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

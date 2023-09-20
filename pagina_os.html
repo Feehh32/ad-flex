@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico" type="image/svg+xml">
+    <title>AD flex | Clientes </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        document.documentElement.classList.add('js')
+    </script>
+</head>
+
+<body id="background">
+    <header class="header-bg">
+        <div class="header container">
+            <a href="./" class="header__logo">
+                <img src="./img/Logo-colorida.svg" width="128" height="33" alt="AD Flex">
+            </a>
+            <nav aria-label="primaria">
+                <ul class="header__menu font-p-s-b color-0">
+                    <li><a href="./">Home</a></li>
+                    <li><a href="./clients.html">Clientes</a></li>
+                    <li><a href="./pagina_os.html">Ordens de Serviço</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container main__os">
+        <div>
+            <h1 class="main__title color-0 fadeInLeft" data-anime="200">Notas de serviço <span>001</span><span
+                    class="color-prim2">.</span></h1>
+        </div>
+        <article class="os fadeInUp" data-anime="400">
+            <div class="os__header">
+                <div class="os__logo--container">
+                    <img class="os__logo" src="./img/icones/logo-os.svg" width="100" height="32"
+                        alt="Logo da ordem de serviço">
+                </div>
+                <h2 class="os__title font-os-xl-b">Ordem de serviço</h2>
+                <span class="os__code font-os-s-b">O.S: 0001</span>
+                <p class="os__email font-os-xs color-11">adm.xavier@hotmail.com</p>
+                <p class="os__tel font-os-xs color-11">(99) 9999-9999 / (99) 9999-9999</p>
+                <p class="os__adress font-os-xxs color-11">Avenida Doutor Felipe Pinel, 500
+                    Jaraguá - São Paulo - SP - Cep: 05181-660</p>
+            </div>
+            <div class="os__client position__os">
+                <div>
+                    <span class="font-os-xxs">Client:</span>
+                    <p class="font-os-s-b">Dadupel</p>
+                </div>
+                <p class="font-os-s-b ">quarta-feira, 28 de junho de 2023</p>
+            </div>
+            <div class="os__thickness position__os">
+                <span class="font-os-xxs color-11">Espessura:</span>
+                <p class="font-os-s-b">2.84</p>
+            </div>
+            <div class="os__itens position__os">
+                <p class="font-os-s-b ">Quant.</p>
+                <p class="font-os-s-b ">Medidas</p>
+                <p class="font-os-s-b ">Serviços</p>
+                <p class="font-os-s-b ">Total</p>
+            </div>
+            <div class="os__content">
+                <ul class="content__values font-os-xs-b">
+                    <li>02</li>
+                    <li>8 / 10</li>
+                    <li>Lions</li>
+                    <li>R$ 2.200,00</li>
+                </ul>
+                <ul class="content__values font-os-xs-b">
+                    <li>02</li>
+                    <li>8 / 10</li>
+                    <li>Lions</li>
+                    <li>R$ 2.200,00</li>
+                </ul>
+            </div>
+            <div class="os__payment">
+                <p class="font-os-m">Valor total do pedido:</p>
+                <p class="font-os-m-b">R$ 4.400,00</p>
+            </div>
+            <div class="os__signature">
+                <p class="font-os-xs">Visto:</p>
+            </div>
+        </article>
+        <div class="os__buttons">
+            <button class="btn">Imprimir</button>
+            <button class="btn">Editar</button>
+            <button class="btn">Download</button>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper container">
+            <img src="./img/Logo-colorida.svg" width="128" height="33" alt="logo da AD Flex">
+            <h4 class="font-p-m-b color-0">Contato:</h4>
+            <span class="font-r-xs color-3">Desenvolvido por Fernando Pereira - Alguns direitos reservados.</span>
+            <p class="font-r-l color-3">adm.xavier@hotmail.com</p>
+            <p class="font-r-l color-3">(99) 9 9999-9999 / (99) 9 9999-9999</p>
+        </div>
+    </footer>
+    <script src="./js/plugin/simple-anime.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

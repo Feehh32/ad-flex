@@ -79,3 +79,40 @@
 .font-r-xs {
   font: 400 0.625rem/1.35 "Roboto", sans-serif;
 }
+
+@media (max-width: 600px) {
+  .font-os-xl-b {
+    font-size: 0.5rem;
+  }
+
+  .font-os-s-b {
+    font-size: 0.5rem;
+  }
+
+  .font-os-xs {
+    font-size: 0.375rem;
+    font-weight: 1.35;
+  }
+
+  .font-os-xxs {
+    font-size: 0.375rem;
+    font-weight: 1.35;
+  }
+
+  .font-os-s-b {
+    font-size: 0.5rem;
+  }
+
+  .font-os-xs-b {
+    font-size: 0.375rem;
+    font-weight: 1.35;
+  }
+
+  .font-os-m {
+    font-size: 0.5rem;
+  }
+
+  .font-os-m-b {
+    font-size: 0.5rem;
+  }
+}

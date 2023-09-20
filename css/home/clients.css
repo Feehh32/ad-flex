@@ -33,6 +33,7 @@
 .clients__card p {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 24px;
   margin-bottom: 32px;
 }
@@ -48,14 +49,4 @@
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
-}
-
-.clients__card a:hover {
-  background: linear-gradient(180deg, #ffae48, #ffaf4b);
-}
-
-@media (max-width: 600px) {
-  .clients__wrap {
-    justify-content: center;
-  }
 }

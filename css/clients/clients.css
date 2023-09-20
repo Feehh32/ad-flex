@@ -23,7 +23,7 @@ input[type="search"] {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background: url("../../img/icones/lupa.svg");
+  background: url("../../img/icones/lupa.svg") no-repeat center;
   position: absolute;
   bottom: 0;
   grid-column: 2;
@@ -46,7 +46,15 @@ input[type="search"]:focus {
   margin-bottom: 120px;
 }
 
+.main__clients .clients__card {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 800px) {
+  .main__search {
+    margin-top: 60px;
+  }
+
   .main__clients {
     flex-wrap: nowrap;
     overflow-x: scroll;

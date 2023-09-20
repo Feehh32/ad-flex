@@ -3,6 +3,7 @@
 @import "./utilities/colors.css";
 @import "./global/header.css";
 @import "./global/footer.css";
+@import "./utilities/animation.css";
 
 /* Utilities */
 @import "./utilities/components.css";
@@ -12,8 +13,15 @@
 @import "./home/tools.css";
 @import "./home/clients.css";
 
-/* Form O.S */
-@import "./formOs.css/formOs.css";
+/* Form */
+@import "./form/form-os.css";
+@import "./form/form-client.css";
 
 /* Clients */
 @import "./clients/clients.css";
+
+/* Client */
+@import "./client/client.css";
+
+/* Service order */
+@import "./pagina_os/pagina_os.css";

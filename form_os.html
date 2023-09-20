@@ -12,6 +12,9 @@
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script>
+        document.documentElement.classList.add('js')
+    </script>
 </head>
 
 <body id="background">
@@ -23,26 +26,26 @@
             <nav aria-label="primaria">
                 <ul class="header__menu font-p-s-b color-0">
                     <li><a href="./">Home</a></li>
-                    <li><a href="./clientes.html">Clientes</a></li>
-                    <li><a href="./ordens-de-servico.html">Ordens de Serviço</a></li>
+                    <li><a href="./clients.html">Clientes</a></li>
+                    <li><a href="./pagina_os.html">Ordens de Serviço</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <h1 class="font-p-xl-b color-0 form-titulo titulo__principal">Insira aqui sua nova O.S<span
+            <h1 class="form-titulo main__title fadeInLeft" data-anime="200">Insira aqui sua nova O.S<span
                     class="color-prim2">.</span></h1>
         </div>
-        <form class="os-add" action="/">
+        <form class="os-add fadeInUp" data-anime="400" action="/">
             <div class="os-add__client">
                 <div>
                     <label class="font-p-s-b" for="client">Selecione o Cliente</label>
-                    <select name="client" id="client" name="client" required></select>
+                    <select class="input-pattern" name="client" id="client" name="client" required></select>
                 </div>
                 <div>
                     <label class="font-p-s-b" for="amount">Quantidade de serviço</label>
-                    <input type="number" id="amount" name="amount" required
+                    <input class="input-pattern" type="number" id="amount" name="amount" required
                         placeholder="Coloque apenas o número. Ex: 3">
                     <button class="adicionar font-r-l-b color-12" type="button">adicionar</button>
                 </div>
@@ -77,21 +80,23 @@
                 </div>
                 <div>
                     <label class="font-p-s-b" for="serviceName">Nome do serviço</label>
-                    <input type="text" name="serviceName" id="serviceName" required>
+                    <input class="input-pattern" type="text" name="serviceName" id="serviceName" required>
                 </div>
                 <div>
                     <label class="font-p-s-b" for="serviceAmount">Quantidade de peças</label>
-                    <input type="text" name="serviceAmount" id="serviceAmount" required>
+                    <input class="input-pattern" type="text" name="serviceAmount" id="serviceAmount" required>
                 </div>
                 <div class="service__measure">
                     <label class="font-p-s-b" for="measures">Medidas</label>
                     <div id="measures">
-                        <input type="text" id="width" name="amount" required placeholder="Largura" required>
-                        <input type="text" id="height" name="amount" required placeholder="Altura" required>
+                        <input class="input-pattern" type="text" id="width" name="amount" required placeholder="Largura"
+                            required>
+                        <input class="input-pattern" type="text" id="height" name="amount" required placeholder="Altura"
+                            required>
                     </div>
                 </div>
             </div>
-            <button class="enviar font-r-l-b color-prim5">Inserir O.S</button>
+            <button type="submit" class="btn font-r-l-b color-prim5">Inserir O.S</button>
         </form>
     </main>
     <footer class="footer">
@@ -103,6 +108,8 @@
             <p class="font-r-l color-3">(99) 9 9999-9999 / (99) 9 9999-9999</p>
         </div>
     </footer>
+    <script src="./js/plugin/simple-anime.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,93 @@
+.client-header {
+  padding: 120px 0 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid var(--color-0);
+  margin-bottom: 32px;
+}
+
+.client-header a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.client-header a::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 15px;
+  background: url("../../img/icones/seta.svg") no-repeat center;
+}
+
+.client-information {
+  padding-bottom: 32px;
+  display: grid;
+  gap: 8px 0;
+}
+
+.client__edit {
+  padding: 16px 0 60px 0;
+  display: block;
+  border-top: 1px solid var(--color-9);
+}
+
+.client-os {
+  padding: 120px 0 120px 0;
+}
+
+.client-os h2 {
+  padding-bottom: 60px;
+  color: var(--color-14);
+}
+
+.client-os__list {
+  display: grid;
+  gap: 16px 0;
+}
+
+.client-os__list li {
+  padding: 32px 20px;
+  background-color: var(--color-0);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  cursor: pointer;
+}
+
+.client-os__list li:hover {
+  background-color: #f9f9f9f9;
+}
+
+@media (max-width: 800px) {
+  .client-os {
+    padding-left: 16px;
+    padding-top: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .client-header {
+    display: block;
+    border-bottom: none;
+    padding-top: 60px;
+  }
+
+  .client-header a {
+    font-size: 0.875rem;
+    padding: 16px 0 16px 0;
+  }
+
+  .client-information {
+    padding-bottom: 60px;
+  }
+
+  .client-os {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 120px;
+  }
+}

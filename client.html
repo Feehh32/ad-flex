@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./favicon.ico" type="image/svg+xml">
-    <title> AD flex | Início </title>
+    <title>AD flex | Clientes </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+
     <script>
         document.documentElement.classList.add('js')
     </script>
 </head>
 
-<body style="background: #27282b;">
+<body id="background">
     <header class="header-bg">
         <div class="header container">
             <a href="./" class="header__logo">
@@ -32,44 +33,43 @@
             </nav>
         </div>
     </header>
-    <main class="tools container">
-        <ul class="tools__list fadeInDown" data-anime="400">
-            <li class="tools__item">
-                <a href="./form_os.html" class="font-p-m-b color-prim5">Gerar Nova O.S</a>
+    <main class="container">
+        <div class="client-header">
+            <h1 class="main__title fadeInLeft" data-anime="200">VillaPack</h1>
+            <a class="font-p-m-b color-0 fadeInRight" data-anime="400" href="./form_os.html">Inserir nova O.S</a>
+        </div>
+        <ul class="client-information fadeInLeft" data-anime="600">
+            <li class="font-r-s color-3">email 1: <a class="font-r-m-b color-1"
+                    href="mailto:villapack@email.com">villapack@email.com</a></li>
+            <li class="font-r-s color-3">email 2: <a class="font-r-m-b color-1"
+                    href="mailto:villapack@email.com">villapack@email.com</a></li>
+            <li class="font-r-s color-3">telefone 1: <a class="font-r-m-b color-1" href="tel:+5521999999999">+55 21
+                    99999-9999</a></li>
+            <li class="font-r-s color-3">telefone 1: <a class="font-r-m-b color-1" href="tel:+5521999999999">+55 21
+                    99999-9999</a></li>
+            <li class="font-r-s color-3">Cálculo de cobrança: <span class="font-r-m-b color-1">0.2</span></li>
+        </ul>
+        <span class="client__edit">
+            <a href="./" class="font-r-s color-4 fadeInLeft" data-anime="600">editar Informações</a>
+        </span>
+    </main>
+    <section class="client-os container">
+        <h2 class="main__title">Notas de Serviço<span class="color-prim2">.</span></h2>
+        <ul class="client-os__list">
+            <li>
+                <span class="font-r-l-b">0001</span>
+                <p class="font-r-l-b">quarta-feira, 28 de junho de 2023</p>
             </li>
-            <li class="tools__item">
-                <a href="./clients.html" class="font-p-m-b color-prim5">Ver todos os clientes</a>
+            <li>
+                <span class="font-r-l-b">0002</span>
+                <p class="font-r-l-b">quarta-feira, 28 de junho de 2023</p>
             </li>
-            <li class="tools__item">
-                <a href="./form_client.html" class="font-p-m-b color-prim5">Adicionar novo cliente</a>
+            <li>
+                <span class="font-r-l-b">0003</span>
+                <p class="font-r-l-b">quinta-feira, 29 de junho de 2023</p>
             </li>
         </ul>
-    </main>
-    <span class="banner fadeInDown" data-anime="200">
-    </span>
-    <article class="clients container">
-        <h1 class="font-p-xl-b color-0 main__title">Principais Clientes<span class="color-prim2">.</span></h1>
-        <div class="clients__wrap">
-            <div class="clients__card">
-                <span class="clients__decoration"></span>
-                <h3 class="font-p-m-b color-1">VillaPack</h3>
-                <p class="font-r-l-b color-2">Ordens de serviço: <span class="font-r-l-b color-2">25</span></p>
-                <a class="color-prim5 font-r-l-b" href="./">Ver tudo</a>
-            </div>
-            <div class="clients__card">
-                <span class="clients__decoration"></span>
-                <h3 class="font-p-m-b color-1">Dadupel</h3>
-                <p class="font-r-l-b color-2">Ordens de serviço: <span class="font-r-l-b color-2">15</span></p>
-                <a class="color-prim5 font-r-l-b" href="./">Ver tudo</a>
-            </div>
-            <div class="clients__card">
-                <span class="clients__decoration"></span>
-                <h3 class="font-p-m-b color-1">Master</h3>
-                <p class="font-r-l-b color-2">Ordens de serviço: <span class="font-r-l-b color-2">35</span></p>
-                <a class="color-prim5 font-r-l-b" href="./">Ver tudo</a>
-            </div>
-        </div>
-    </article>
+    </section>
     <footer class="footer">
         <div class="footer__wrapper container">
             <img src="./img/Logo-colorida.svg" width="128" height="33" alt="logo da AD Flex">
@@ -79,6 +79,7 @@
             <p class="font-r-l color-3">(99) 9 9999-9999 / (99) 9 9999-9999</p>
         </div>
     </footer>
+
     <script src="./js/plugin/simple-anime.js"></script>
     <script src="js/main.js"></script>
 </body>
