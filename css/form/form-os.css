@@ -11,7 +11,7 @@
   border-radius: 4px;
 }
 
-.os-add div label:first-child {
+.os-add fieldset label:first-child {
   display: block;
   margin-bottom: 4px;
 }
@@ -48,16 +48,16 @@
 }
 
 .service .service__thickness,
-.service__thickness + div {
+.service__thickness + fieldset {
   grid-column: 1/-1;
 }
 
-.service__thickness div {
+.service__thickness fieldset {
   display: inline-block;
   padding-left: 32px;
 }
 
-.service__thickness label:first-child {
+.service__thickness h3 {
   margin-bottom: 4px;
 }
 

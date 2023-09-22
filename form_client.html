@@ -35,33 +35,41 @@
     <main class="container">
         <h1 class="main__title formClient-title fadeInLeft" data-anime="200">Insira aqui um novo Cliente<span
                 class="color-prim2">.</span></h1>
-        <form action="./" class="client-add fadeInUp" data-anime="400">
-            <div>
+        <form action="./" class="client-add fadeInUp" data-anime="400" data-form>
+            <fieldset>
                 <label class="font-p-s-b" for="nameClient">Nome do Cliente</label>
                 <input class="input-pattern" type="text" id="nameClient" name="nameClient"
-                    placeholder="Digite aqui o nome do cliente" required>
-            </div>
-            <div>
+                    placeholder="Digite aqui o nome do cliente" required data-field>
+                <span class="msgError"></span>
+            </fieldset>
+            <fieldset>
                 <label class="font-p-s-b" for="email1">Email 1</label>
                 <input class="input-pattern" type="email" id="email1" name="email1" placeholder="client@email.com"
-                    required>
-            </div>
-            <div>
+                    data-field required>
+                <span class="msgError"></span>
+            </fieldset>
+            <fieldset>
                 <label class="font-p-s-b" for="email2">Email 2</label>
-                <input class="input-pattern" type="email" id="email2" name="email2" placeholder="client@email.com">
-            </div>
-            <div>
+                <input class="input-pattern" type="email" id="email2" name="email2" placeholder="client@email.com"
+                    data-field>
+                <span class="msgError"></span>
+            </fieldset>
+            <fieldset>
                 <label class="font-p-s-b" for="tel1">Telefone 1</label>
-                <input class="input-pattern" type="tel" id="tel1" name="tel1" placeholder="(99) 999999999" required>
-            </div>
-            <div>
+                <input class="input-pattern" type="tel" id="tel1" name="tel1" placeholder="(99) 999999999" required
+                    data-field>
+                <span class="msgError"></span>
+            </fieldset>
+            <fieldset>
                 <label class="font-p-s-b" for="tel2">Telefone 2</label>
-                <input class="input-pattern" type="tel" id="tel2" name="tel2" placeholder="(99) 999999999">
-            </div>
-            <div>
+                <input class="input-pattern" type="tel" id="tel2" name="tel2" placeholder="(99) 999999999" data-field>
+                <span class="msgError"></span>
+            </fieldset>
+            <fieldset>
                 <label class="font-p-s-b" for="charge">Cálculo de cobrança</label>
-                <input class="input-pattern" type="number" id="charge" name="charge" required>
-            </div>
+                <input class="input-pattern" type="number" id="charge" name="charge" required data-field>
+                <span class="msgError"></span>
+            </fieldset>
             <button type="submit" class="btn font-r-l-b">Adicionar</button>
         </form>
     </main>
@@ -75,7 +83,7 @@
         </div>
     </footer>
     <script src="./js/plugin/simple-anime.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 
 </html>

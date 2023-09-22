@@ -14,15 +14,15 @@
   gap: 40px;
 }
 
-.client-add div label {
+.client-add fieldset label {
   margin-bottom: 8px;
 }
 
-.client-add div:nth-child(1) {
+.client-add fieldset:nth-child(1) {
   grid-column: 1/-1;
 }
 
-.client-add div:nth-child(6) {
+.client-add fieldset:nth-child(6) {
   grid-column: 1;
 }
 

@@ -39,61 +39,61 @@
         </div>
         <form class="os-add fadeInUp" data-anime="400" action="/">
             <div class="os-add__client">
-                <div>
+                <fieldset>
                     <label class="font-p-s-b" for="client">Selecione o Cliente</label>
                     <select class="input-pattern" name="client" id="client" name="client" required></select>
-                </div>
-                <div>
+                </fieldset>
+                <fieldset>
                     <label class="font-p-s-b" for="amount">Quantidade de serviço</label>
                     <input class="input-pattern" type="number" id="amount" name="amount" required
                         placeholder="Coloque apenas o número. Ex: 3">
                     <button class="adicionar font-r-l-b color-12" type="button">adicionar</button>
-                </div>
+                </fieldset>
             </div>
             <div class="service">
                 <div class="service__thickness">
-                    <label for="thickness__label" class="font-p-s-b">Escolher espessura</label>
-                    <div>
+                    <h3 for="thickneh3" class="font-p-s-b">Escolher espessura</h3>
+                    <fieldset>
                         <input type="radio" name="thickness" value="1.14" id="1.14">
                         <label for="1.14" class="font-r-m-b">1.14</label>
-                    </div>
-                    <div>
+                    </fieldset>
+                    <fieldset>
                         <input type="radio" name="thickness" value="1.70" id="1.70">
                         <label for="1.70" class="font-r-m-b">1.70</label>
-                    </div>
-                    <div>
+                    </fieldset>
+                    <fieldset>
                         <input type="radio" name="thickness" value="2.84" id="2.84">
                         <label for="2.84" class="font-r-m-b">2.84</label>
-                    </div>
-                    <div>
+                    </fieldset>
+                    <fieldset>
                         <input type="radio" name="thickness" value="3.94" id="3.94">
                         <label for="3.94" class="font-r-m-b">3.94</label>
-                    </div>
-                    <div>
+                    </fieldset>
+                    <fieldset>
                         <input type="radio" name="thickness" value="4.94" id="4.94">
                         <label for="thickness" class="font-r-m-b">4.94</label>
-                    </div>
-                    <div>
+                    </fieldset>
+                    <fieldset>
                         <input type="radio" name="thickness" value="6.35" id="6.35">
                         <label for="thickness" class="font-r-m-b">6.35</label>
-                    </div>
+                    </fieldset>
                 </div>
-                <div>
+                <fieldset>
                     <label class="font-p-s-b" for="serviceName">Nome do serviço</label>
                     <input class="input-pattern" type="text" name="serviceName" id="serviceName" required>
-                </div>
-                <div>
+                </fieldset>
+                <fieldset>
                     <label class="font-p-s-b" for="serviceAmount">Quantidade de peças</label>
                     <input class="input-pattern" type="text" name="serviceAmount" id="serviceAmount" required>
-                </div>
+                </fieldset>
                 <div class="service__measure">
                     <label class="font-p-s-b" for="measures">Medidas</label>
-                    <div id="measures">
+                    <fieldset id="measures">
                         <input class="input-pattern" type="text" id="width" name="amount" required placeholder="Largura"
                             required>
                         <input class="input-pattern" type="text" id="height" name="amount" required placeholder="Altura"
                             required>
-                    </div>
+                    </fieldset>
                 </div>
             </div>
             <button type="submit" class="btn font-r-l-b color-prim5">Inserir O.S</button>
@@ -109,7 +109,7 @@
         </div>
     </footer>
     <script src="./js/plugin/simple-anime.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 
 </html>
