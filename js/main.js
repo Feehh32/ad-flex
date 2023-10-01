@@ -1,14 +1,16 @@
-import { handleFormField } from "./form/formClient.js";
-
 // Animação
 if (window.SimpleAnime) {
   new SimpleAnime();
 }
 
-// validação do formulário de clientes
+// Fetch de clientes
+export const url = "http://localhost:3000/clients";
 
-const formField = document.querySelectorAll("[data-field]");
+const response = await fetch(url)
+  .then((resp) => resp.json())
+  .then((data) => {
+    return data;
+  })
+  .catch((error) => console.error(error));
 
-formField.forEach((field) => {
-  field.addEventListener("blur", () => handleFormField(field));
-});
+export const clients = [...response];

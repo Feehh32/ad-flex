@@ -5,6 +5,7 @@ export const handleFormField = (field) => {
   field.setCustomValidity("");
 
   errorsType.forEach((error) => {
+    "";
     if (field.validity[error]) {
       msg = msgErrors[field.name][error];
     }
@@ -22,9 +23,14 @@ export const handleFormField = (field) => {
   }
 };
 
-const errorsType = ["valueMissing", "typeMismatch", "tooShort"];
+const errorsType = [
+  "valueMissing",
+  "typeMismatch",
+  "tooShort",
+  "patternMismatch",
+];
 
-export const msgErrors = {
+const msgErrors = {
   nameClient: {
     valueMissing: "O campo de nome não pode estar vazio.",
     tooShort: "Por favor, preencha um nome válido.",
@@ -35,19 +41,28 @@ export const msgErrors = {
     typeMismatch: "Por favor, preencha um email válido",
   },
   email2: {
-    valueMissing: "O campo de email não pode estar vazio.",
     tooShort: "Por favor, preencha um email válido.",
     typeMismatch: "Por favor, preencha um email válido",
   },
   tel1: {
     valueMissing: "O campo de telefone não pode estar vazio.",
-    tooShort: "Por favor, preencha um telefone válido.",
+    patternMismatch: "Por favor forneça um número no formato (XX) XXXXX-XXXX",
   },
   tel2: {
-    valueMissing: "O campo de telefone não pode estar vazio.",
-    tooShort: "Por favor, preencha um telefone válido.",
+    patternMismatch: "Por favor forneça um número no formato (XX) XXXXX-XXXX",
   },
   charge: {
     valueMissing: "O campo de cobrança não pode estar vazio.",
   },
+};
+
+// mensagem de envio de formulário bem sucedido
+
+export const showMessage = () => {
+  const successMsg = document.querySelector("[data-msg]");
+  successMsg.classList.add("active");
+
+  setTimeout(() => {
+    successMsg.classList.remove("active");
+  }, 5000);
 };

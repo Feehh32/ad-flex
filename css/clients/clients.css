@@ -74,8 +74,4 @@ input[type="search"]:focus {
   input[type="search"] {
     padding: 16px;
   }
-
-  .main__clients {
-    flex-wrap: wrap;
-  }
 }

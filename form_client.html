@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./favicon.ico" type="image/svg+xml">
-    <title>AD flex | Inserir nova O.S </title>
+    <title>AD flex | Inserir novo Cliente </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -35,7 +35,10 @@
     <main class="container">
         <h1 class="main__title formClient-title fadeInLeft" data-anime="200">Insira aqui um novo Cliente<span
                 class="color-prim2">.</span></h1>
-        <form action="./" class="client-add fadeInUp" data-anime="400" data-form>
+        <div class="font-p-m-b fadeInLeft hidden" data-msg>
+            <p>Cliente inserido com sucesso!</p>
+        </div>
+        <form class="client-add fadeInUp" action="" data-anime="400" data-form>
             <fieldset>
                 <label class="font-p-s-b" for="nameClient">Nome do Cliente</label>
                 <input class="input-pattern" type="text" id="nameClient" name="nameClient"
@@ -56,18 +59,21 @@
             </fieldset>
             <fieldset>
                 <label class="font-p-s-b" for="tel1">Telefone 1</label>
-                <input class="input-pattern" type="tel" id="tel1" name="tel1" placeholder="(99) 999999999" required
-                    data-field>
-                <span class="msgError"></span>
+                <input class="input-pattern" type="tel" id="tel1" name="tel1" placeholder="(99) 99999-9999" required
+                    pattern="^\(\d{2}\) \d{4,5}-\d{4}$"
+                    title="Digite um número de telefone válido no formato (XX) XXXX-XXXX ou (XX) XXXXX-XXXX" data-field>
+                <span class=" msgError"></span>
             </fieldset>
             <fieldset>
                 <label class="font-p-s-b" for="tel2">Telefone 2</label>
-                <input class="input-pattern" type="tel" id="tel2" name="tel2" placeholder="(99) 999999999" data-field>
+                <input class="input-pattern" type="tel" id="tel2" name="tel2" placeholder="(99) 99999-9999"
+                    pattern="^\(\d{2}\) \d{4,5}-\d{4}$"
+                    title="Digite um número de telefone válido no formato (XX) XXXX-XXXX ou (XX) XXXXX-XXXX" data-field>
                 <span class="msgError"></span>
             </fieldset>
             <fieldset>
                 <label class="font-p-s-b" for="charge">Cálculo de cobrança</label>
-                <input class="input-pattern" type="number" id="charge" name="charge" required data-field>
+                <input class="input-pattern" type="text" id="charge" name="charge" required data-field>
                 <span class="msgError"></span>
             </fieldset>
             <button type="submit" class="btn font-r-l-b">Adicionar</button>
@@ -83,7 +89,8 @@
         </div>
     </footer>
     <script src="./js/plugin/simple-anime.js"></script>
-    <script src="js/main.js" type="module"></script>
+    <script type="module" src="./js/form/formClientMain.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
