@@ -34,6 +34,32 @@ fieldset {
   font-family: "Roboto", sans-serif;
 }
 
+/* mensagem de sucesso */
+
+.hidden {
+  display: none;
+  margin: 32px auto 0 auto;
+  padding: 16px 32px;
+  text-align: center;
+  max-width: 50%;
+}
+
+.active {
+  background-color: #b4ffbb;
+  border-radius: 4px;
+  border: 3px solid #004f08;
+  color: #004f08;
+  display: block;
+}
+
+.activeError {
+  background-color: #fff6c9;
+  border-radius: 4px;
+  border: 3px solid #fad311;
+  color: #8b7400;
+  display: block;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--color-1);

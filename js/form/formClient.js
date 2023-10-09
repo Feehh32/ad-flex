@@ -58,11 +58,12 @@ const msgErrors = {
 
 // mensagem de envio de formulário bem sucedido
 
-export const showMessage = () => {
+export const showMessage = (form) => {
   const successMsg = document.querySelector("[data-msg]");
   successMsg.classList.add("active");
 
   setTimeout(() => {
     successMsg.classList.remove("active");
+    form.reset();
   }, 5000);
 };

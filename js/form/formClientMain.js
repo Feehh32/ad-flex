@@ -1,11 +1,11 @@
 import { handleFormField, showMessage } from "./formClient.js";
-import { url } from "../main.js";
+import { urlClients } from "../main.js";
 
 // Lidando com o formulário de clientes
 
 const collectingRegistration = async (formData) => {
   try {
-    const connection = await fetch(url, {
+    const connection = await fetch(urlClients, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -16,7 +16,7 @@ const collectingRegistration = async (formData) => {
       throw new Error("Erro na requisição:" + connection.statusText);
     }
     const connectionConverted = await connection.json();
-    showMessage();
+    showMessage(formClients);
     return connectionConverted;
   } catch (error) {
     console.error(error);
@@ -34,5 +34,5 @@ formClients.addEventListener("submit", async (event) => {
   event.preventDefault();
   const formData = new FormData(formClients);
   const data = Object.fromEntries(formData);
-  collectingRegistration(data);
+  await collectingRegistration(data);
 });

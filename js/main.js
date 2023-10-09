@@ -4,13 +4,25 @@ if (window.SimpleAnime) {
 }
 
 // Fetch de clientes
-export const url = "http://localhost:3000/clients";
+export const urlClients = "http://localhost:3000/clients";
 
-const response = await fetch(url)
+const responseClients = await fetch(urlClients)
   .then((resp) => resp.json())
   .then((data) => {
     return data;
   })
   .catch((error) => console.error(error));
 
-export const clients = [...response];
+export const clients = [...responseClients];
+
+// Fetch das notas de serviço
+export const urlOs = "http://localhost:3000/OS";
+
+const responseOs = await fetch(urlOs)
+  .then((resp) => resp.json())
+  .then((data) => {
+    return data;
+  })
+  .catch((error) => console.error(error));
+
+export const os = [...responseOs];

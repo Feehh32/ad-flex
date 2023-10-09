@@ -5,7 +5,7 @@
   margin-bottom: 120px;
 }
 
-.clients__wrap {
+.clients__wrapper {
   display: flex;
   gap: 40px;
   overflow-x: auto;

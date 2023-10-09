@@ -27,7 +27,7 @@
                 <ul class="header__menu font-p-s-b color-0">
                     <li><a href="./">Home</a></li>
                     <li><a href="./clients.html">Clientes</a></li>
-                    <li><a href="./pagina_os.html">Ordens de Serviço</a></li>
+                    <li><a href="./form_client.html">Adicionar cliente</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,20 +37,17 @@
             <h1 class="form-titulo main__title fadeInLeft" data-anime="200">Insira aqui sua nova O.S<span
                     class="color-prim2">.</span></h1>
         </div>
-        <form class="os-add fadeInUp" data-anime="400" method="post">
+        <span class="font-p-s-b fadeInLeft hidden" data-msg>
+        </span>
+        <form class="os-add fadeInUp" data-anime="400" data-formOs method="post">
             <div class="os-add__client">
                 <fieldset>
                     <label class="font-p-s-b" for="client">Selecione o Cliente</label>
-                    <select class="input-pattern" name="client" id="client" name="client" required></select>
+                    <select class="input-pattern" name="client" id="client" data-client required>
+                        <option value=""></option>
+                    </select>
+                    <span class="msgError"></span>
                 </fieldset>
-                <fieldset>
-                    <label class="font-p-s-b" for="amount">Quantidade de serviço</label>
-                    <input class="input-pattern" type="number" id="amount" name="amount" required
-                        placeholder="Coloque apenas o número. Ex: 3">
-                    <button class="adicionar font-r-l-b color-12" type="button">adicionar</button>
-                </fieldset>
-            </div>
-            <div class="service">
                 <div class="service__thickness">
                     <h3 for="thickneh3" class="font-p-s-b">Escolher espessura</h3>
                     <fieldset>
@@ -78,22 +75,41 @@
                         <label for="thickness" class="font-r-m-b">6.35</label>
                     </fieldset>
                 </div>
-                <fieldset>
-                    <label class="font-p-s-b" for="serviceName">Nome do serviço</label>
-                    <input class="input-pattern" type="text" name="serviceName" id="serviceName" required>
-                </fieldset>
-                <fieldset>
-                    <label class="font-p-s-b" for="serviceAmount">Quantidade de peças</label>
-                    <input class="input-pattern" type="text" name="serviceAmount" id="serviceAmount" required>
-                </fieldset>
-                <div class="service__measure">
-                    <label class="font-p-s-b" for="measures">Medidas</label>
-                    <fieldset id="measures">
-                        <input class="input-pattern" type="text" id="width" name="amount" required placeholder="Largura"
+                <div class="btn__addServiceWrapper">
+                    <button class="adicionar font-r-l-b color-12" data-btnServiceAmount type="button">adicionar
+                        formulario de O.S
+                    </button>
+                </div>
+            </div>
+            <div data-service class="service__wrapper">
+                <div class="service">
+                    <fieldset>
+                        <label class="font-p-s-b" for="serviceName">Nome do serviço</label>
+                        <input class="input-pattern" type="text" name="serviceName" id="serviceName0" data-serviceItem
                             required>
-                        <input class="input-pattern" type="text" id="height" name="amount" required placeholder="Altura"
-                            required>
+                        <span class="msgError"></span>
                     </fieldset>
+                    <fieldset>
+                        <label class="font-p-s-b" for="serviceAmount">Quantidade de peças</label>
+                        <input class="input-pattern" type="number" name="serviceAmount" id="serviceAmount0"
+                            data-serviceItem required>
+                        <span class="msgError"></span>
+                    </fieldset>
+                    <div class="service__measure">
+                        <label class="font-p-s-b" for="measures">Medidas</label>
+                        <fieldset id="measures" class="measure__container">
+                            <div>
+                                <input class="input-pattern inputWidth" type="text" id="width0" name="width"
+                                    data-serviceItem placeholder="Largura" required>
+                                <span class="msgError"></span>
+                            </div>
+                            <div>
+                                <input class="input-pattern inputHeight" type="text" id="height0" name="height"
+                                    data-serviceItem placeholder="Altura" required>
+                                <span class="msgError"></span>
+                            </div>
+                        </fieldset>
+                    </div>
                 </div>
             </div>
             <button type="submit" class="btn font-r-l-b color-prim5">Inserir O.S</button>
@@ -105,11 +121,12 @@
             <h4 class="font-p-m-b color-0">Contato:</h4>
             <span class="font-r-xs color-3">Desenvolvido por Fernando Pereira - Alguns direitos reservados.</span>
             <p class="font-r-l color-3">adm.xavier@hotmail.com</p>
-            <p class="font-r-l color-3">(99) 9 9999-9999 / (99) 9 9999-9999</p>
+            <p class="font-r-l color-3">(11) 94285-8422 / (99) 9 9999-9999</p>
         </div>
     </footer>
     <script src="./js/plugin/simple-anime.js"></script>
-    <script src="js/main.js" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
+    <script type="module" src="./js/form/formOsMain.js"></script>
 </body>
 
 </html>
