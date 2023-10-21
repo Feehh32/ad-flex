@@ -19,7 +19,9 @@ if (client) {
   clientMainInformation.innerHTML = ` 
     <div class="client-header">
     <h1 class="main__title" >${client.nameClient}</h1>
-    <a class="font-p-m-b color-0 "  href="./form_os.html">Inserir nova O.S</a>
+    <a class="font-p-m-b color-0 "  href="./form_os.html?client=${
+      client.nameClient
+    }">Inserir nova O.S</a>
     </div>
     <ul class="client-information " >
     <li class="font-r-s color-3">email 1: <a class="font-r-m-b color-1"
@@ -38,22 +40,22 @@ if (client) {
     }</span></li>
     </ul>
     <span class="client__edit">
-    <a href="./" class="font-r-s color-4" >editar Informações</a>
+    <a href="../../form_client.html?editar=${
+      client.id
+    }" class="font-r-s color-4">editar Informações</a>
     </span>
     `;
 } else {
   clientMainInformation.innerHTML += `<h3>Não há clientes</h3>`;
 }
-console.log(filteredOs);
 if (filteredOs.length > 0) {
   filteredOs.forEach((os) => {
     osField.innerHTML += `
         <li>
-          <a href="./os_page.html?id=${os.id}"> 
+          <a href="./os_page.html?id=${os.id}&client=${os.client}"> 
             <span class="font-r-l-b">${os.id}</span>
             <p class="font-r-l-b">${os.date}</p>
           </a>
-         
         </li>
     `;
   });

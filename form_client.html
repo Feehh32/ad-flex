@@ -33,11 +33,9 @@
         </div>
     </header>
     <main class="container">
-        <h1 class="main__title formClient-title fadeInLeft" data-anime="200">Insira aqui um novo Cliente<span
-                class="color-prim2">.</span></h1>
-        <div class="font-p-m-b fadeInLeft hidden" data-msg>
-            <p>Cliente inserido com sucesso!</p>
-        </div>
+        <h1 class="main__title formClient-title fadeInLeft" data-titleForm data-anime="200">Insira aqui um novo
+            Cliente<span class="color-prim2">.</span></h1>
+        <span class="font-p-s-b fadeInLeft hidden" data-msg></span>
         <form class="client-add fadeInUp" action="" data-anime="400" data-form>
             <fieldset>
                 <label class="font-p-s-b" for="nameClient">Nome do Cliente</label>
@@ -73,10 +71,10 @@
             </fieldset>
             <fieldset>
                 <label class="font-p-s-b" for="charge">Cálculo de cobrança</label>
-                <input class="input-pattern" type="text" id="charge" name="charge" required data-field>
+                <input class="input-pattern" type="number" step="0.01" id="charge" name="charge" required data-field>
                 <span class="msgError"></span>
             </fieldset>
-            <button type="submit" class="btn font-r-l-b">Adicionar</button>
+            <button type="submit" class="btn font-r-l-b" data-btnForm>Adicionar</button>
         </form>
     </main>
     <footer class="footer">
@@ -85,7 +83,7 @@
             <h4 class="font-p-m-b color-0">Contato:</h4>
             <span class="font-r-xs color-3">Desenvolvido por Fernando Pereira - Alguns direitos reservados.</span>
             <p class="font-r-l color-3">adm.xavier@hotmail.com</p>
-            <p class="font-r-l color-3">(11) 94285-8422 / (99) 9 9999-9999</p>
+            <p class="font-r-l color-3">(11) 94285-8422</p>
         </div>
     </footer>
     <script src="./js/plugin/simple-anime.js"></script>

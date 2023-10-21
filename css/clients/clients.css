@@ -1,5 +1,5 @@
 .main__search {
-  margin: 120px 0;
+  margin-top: 120px;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 0 8px;
@@ -43,7 +43,34 @@ input[type="search"]:focus {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  margin-bottom: 120px;
+  margin: 120px 0;
+}
+
+.btn-delete {
+  background-image: url("../../img/icones/lixeira.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  padding: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid var(--color-3);
+  background-color: rgb(164, 159, 168, 0.5);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+}
+
+.notFound-msg {
+  margin-bottom: 100px;
 }
 
 .main__clients .clients__card {

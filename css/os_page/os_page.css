@@ -10,11 +10,18 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* estilos para quando nao houver os para ser exibida */
+
+.msgEmptyOs__wrapper {
+  background-color: aqua;
+  width: 100%;
+}
+
 .os__header {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   align-items: center;
-  gap: 8px 32px;
+  gap: 6px 32px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--color-11);
 }
@@ -63,6 +70,8 @@
 
 .os__itens {
   justify-content: space-between;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .os__content {
@@ -72,17 +81,19 @@
 }
 
 .content__values {
-  display: flex;
   padding: 8px 16px;
   background-color: var(--color-1);
   border-radius: 4px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  align-items: center;
 }
 
 .os__payment {
   border-bottom: 1px solid var(--color-11);
-  padding: 40px 0 8px 0;
+  padding: 16px 0 8px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -122,5 +133,9 @@
 
   .os {
     margin: 32px auto 16px auto;
+  }
+
+  .msgOsDeleted {
+    font-size: 1.5rem;
   }
 }

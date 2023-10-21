@@ -49,7 +49,7 @@
                     <span class="msgError"></span>
                 </fieldset>
                 <div class="service__thickness">
-                    <h3 for="thickneh3" class="font-p-s-b">Escolher espessura</h3>
+                    <h3 class="font-p-s-b">Escolher espessura</h3>
                     <fieldset>
                         <input type="radio" name="thickness" value="1.14" id="1.14">
                         <label for="1.14" class="font-r-m-b">1.14</label>
@@ -68,11 +68,11 @@
                     </fieldset>
                     <fieldset>
                         <input type="radio" name="thickness" value="4.94" id="4.94">
-                        <label for="thickness" class="font-r-m-b">4.94</label>
+                        <label for="4.94" class="font-r-m-b">4.94</label>
                     </fieldset>
                     <fieldset>
                         <input type="radio" name="thickness" value="6.35" id="6.35">
-                        <label for="thickness" class="font-r-m-b">6.35</label>
+                        <label for="6.35" class="font-r-m-b">6.35</label>
                     </fieldset>
                 </div>
                 <div class="btn__addServiceWrapper">
@@ -84,13 +84,13 @@
             <div data-service class="service__wrapper">
                 <div class="service">
                     <fieldset>
-                        <label class="font-p-s-b" for="serviceName">Nome do serviço</label>
+                        <label class="font-p-s-b" for="serviceName0">Nome do serviço</label>
                         <input class="input-pattern" type="text" name="serviceName" id="serviceName0" data-serviceItem
                             required>
                         <span class="msgError"></span>
                     </fieldset>
                     <fieldset>
-                        <label class="font-p-s-b" for="serviceAmount">Quantidade de peças</label>
+                        <label class="font-p-s-b" for="serviceAmount0">Quantidade de peças</label>
                         <input class="input-pattern" type="number" name="serviceAmount" id="serviceAmount0"
                             data-serviceItem required>
                         <span class="msgError"></span>
@@ -99,17 +99,22 @@
                         <label class="font-p-s-b" for="measures">Medidas</label>
                         <fieldset id="measures" class="measure__container">
                             <div>
-                                <input class="input-pattern inputWidth" type="text" id="width0" name="width"
-                                    data-serviceItem placeholder="Largura" required>
+                                <input class="input-pattern inputHeight" type="number" step="0.01" id="height0"
+                                    name="height" data-serviceItem placeholder="Altura" required>
                                 <span class="msgError"></span>
                             </div>
                             <div>
-                                <input class="input-pattern inputHeight" type="text" id="height0" name="height"
-                                    data-serviceItem placeholder="Altura" required>
+                                <input class="input-pattern inputWidth" type="number" step="0.01" id="width0"
+                                    name="width" data-serviceItem placeholder="Largura" required>
                                 <span class="msgError"></span>
                             </div>
                         </fieldset>
                     </div>
+                    <fieldset class="hideMeasures__Wrapper">
+                        <input type="checkbox" name="hideMeasures" value="sim" id="hiddenMeasures" data-serviceItem>
+                        <label for="hiddenMeasures" class="font-r-m-b">Esconder medidas na os</label>
+                        <span class="msgError"></span>
+                    </fieldset>
                 </div>
             </div>
             <button type="submit" class="btn font-r-l-b color-prim5">Inserir O.S</button>
@@ -121,7 +126,7 @@
             <h4 class="font-p-m-b color-0">Contato:</h4>
             <span class="font-r-xs color-3">Desenvolvido por Fernando Pereira - Alguns direitos reservados.</span>
             <p class="font-r-l color-3">adm.xavier@hotmail.com</p>
-            <p class="font-r-l color-3">(11) 94285-8422 / (99) 9 9999-9999</p>
+            <p class="font-r-l color-3">(11) 94285-8422</p>
         </div>
     </footer>
     <script src="./js/plugin/simple-anime.js"></script>

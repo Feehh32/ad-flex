@@ -36,8 +36,9 @@
     <main class="main container">
         <div class="main__search fadeInDown" data-anime="200">
             <label class="font-p-m-b color-5" for="search">Pesquisar um cliente:</label>
-            <input type="search" id="search">
+            <input type="search" id="search" data-search>
         </div>
+        <span class="font-p-s-b fadeInLeft hidden" data-msg>mensagem de erro</span>
         <section class="main__clients fadeInDown" aria-label="Clientes" data-anime="400" data-clients>
         </section>
     </main>
@@ -47,7 +48,7 @@
             <h4 class="font-p-m-b color-0">Contato:</h4>
             <span class="font-r-xs color-3">Desenvolvido por Fernando Pereira - Alguns direitos reservados.</span>
             <p class="font-r-l color-3">adm.xavier@hotmail.com</p>
-            <p class="font-r-l color-3">(11) 94285-8422 / (99) 9 9999-9999</p>
+            <p class="font-r-l color-3">(11) 94285-8422</p>
         </div>
     </footer>
     <script src="./js/plugin/simple-anime.js"></script>

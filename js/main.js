@@ -16,13 +16,16 @@ const responseClients = await fetch(urlClients)
 export const clients = [...responseClients];
 
 // Fetch das notas de serviço
-export const urlOs = "http://localhost:3000/OS";
+export const urlOs = "http://localhost:3000/os";
 
 const responseOs = await fetch(urlOs)
   .then((resp) => resp.json())
   .then((data) => {
     return data;
   })
-  .catch((error) => console.error(error));
+  .catch((error) => {
+    console.error(error);
+    responseClients = [];
+  });
 
 export const os = [...responseOs];

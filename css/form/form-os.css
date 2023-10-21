@@ -91,6 +91,12 @@
   background: linear-gradient(180deg, #ffae48, #ffaf4b);
 }
 
+.hideMeasures__Wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
 @media (max-width: 600px) {
   .form-titulo {
     margin-top: 60px;

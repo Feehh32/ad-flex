@@ -43,6 +43,11 @@ export const handleServiceAmount = () => {
           </div>
       </fieldset>
   </div>
+    <fieldset class="hideMeasures__Wrapper">
+      <input type="checkbox" name="hideMeasures" value="sim" id="hiddenMeasures" data-serviceItem>
+      <label for="hiddenMeasures" class="font-r-m-b">Esconder medidas na os</label>
+      <span class="msgError"></span>
+    </fieldset>
     `;
   serviceWrapper.appendChild(newService);
 };
@@ -88,7 +93,7 @@ const msgErrors = {
     tooShort: "Por favor, preencha um nome válido.",
   },
   serviceAmount: {
-    valueMissing: "O campo de email não pode estar vazio.",
+    valueMissing: "O campo de quantidade não pode estar vazio.",
   },
   width: {
     valueMissing: "O campo de largura não pode estar vazio.",
@@ -102,15 +107,16 @@ const msgErrors = {
   },
 };
 
-// Mensagem de erro enviada pro usuário quando bem sucessido
+// Mensagem de erro enviada pro usuário quando bem sucedido
 
-export const showMessage = (form, textMessage) => {
+export const showMessage = (form, textMessage, classMsg) => {
   const msg = document.querySelector("[data-msg]");
-  msg.classList.add("active");
-  msg.innerText += textMessage;
+  msg.classList.add(classMsg);
+  msg.innerText = textMessage;
+  msg.scrollIntoView({ behavior: "smooth" });
 
   setTimeout(() => {
-    msg.classList.remove("active");
+    msg.classList.remove(classMsg);
     form.reset();
-  }, 5000);
+  }, 3000);
 };

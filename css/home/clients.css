@@ -19,6 +19,7 @@
   background-color: var(--color-12);
   display: grid;
   text-align: center;
+  position: relative;
 }
 
 .clients__decoration {

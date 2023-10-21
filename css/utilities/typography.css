@@ -56,10 +56,17 @@
 
 /* Roboto */
 
+.font-r-xl-b {
+  font: 500 3rem/1.125 "Roboto", sans-serif;
+}
+
 .font-r-l-b {
   font: 500 1.125rem/1.33 "Roboto", sans-serif;
 }
 
+.font-r-xl {
+  font: 400 3rem/1.125 "Roboto", sans-serif;
+}
 .font-r-l {
   font: 400 1.125rem/1.33 "Roboto", sans-serif;
 }
