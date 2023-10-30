@@ -35,8 +35,8 @@ const showMessage = (classMsg, textMessage) => {
 const filterClients = () => {
   const search = searchInput.value;
   const filteredClients = clients.filter((client) => {
-    return client.nameClient
-      ? client.nameClient.toLowerCase().includes(search.toLowerCase())
+    return client.name
+      ? client.name.toLowerCase().includes(search.toLowerCase())
       : false;
   });
   return filteredClients;
@@ -50,7 +50,7 @@ const displayClients = (clients) => {
     if (filteredClients.length > 0) {
       filteredClients.forEach((client) => {
         const amountOs = () => {
-          const osAmount = os.filter((os) => os.client === client.nameClient);
+          const osAmount = os.filter((os) => os.client === client.name);
           return osAmount.length;
         };
         const osAmount = amountOs();
@@ -59,7 +59,7 @@ const displayClients = (clients) => {
         <div class="clients__card" data-card>
         <button type="button" class="btn-delete" data-client-id="${client.id}" title="Excluir cliente"></button>
         <span class="clients__decoration"></span>
-        <h3 class="font-p-m-b color-1">${client.nameClient}</h3>
+        <h3 class="font-p-m-b color-1">${client.name}</h3>
         <p class="font-r-l-b color-2">Ordens de serviço: <span class="font-r-l-b color-2">${osAmount}</span></p>
         <a class="color-prim5 font-r-l-b" href="./client.html?id=${client.id}">Ver tudo</a>
         </div>`;
@@ -70,7 +70,7 @@ const displayClients = (clients) => {
   } else {
     clients.forEach((client) => {
       const amountOs = () => {
-        const osAmount = os.filter((os) => os.client === client.nameClient);
+        const osAmount = os.filter((os) => os.client === client.name);
         return osAmount.length;
       };
       const osAmount = amountOs();
@@ -79,7 +79,7 @@ const displayClients = (clients) => {
       <div class="clients__card" data-card>
       <button type="button" class="btn-delete" data-client-id="${client.id}" title="Excluir cliente"></button>
       <span class="clients__decoration"></span>
-      <h3 class="font-p-m-b color-1">${client.nameClient}</h3>
+      <h3 class="font-p-m-b color-1">${client.name}</h3>
       <p class="font-r-l-b color-2">Ordens de serviço: <span class="font-r-l-b color-2">${osAmount}</span></p>
       <a class="color-prim5 font-r-l-b" href="./client.html?id=${client.id}">Ver tudo</a>
       </div>`;

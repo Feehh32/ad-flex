@@ -112,7 +112,6 @@
   width: 180px;
   height: 0.8px;
   background-color: var(--color-11);
-  right: 0;
 }
 
 .os__buttons {
@@ -137,5 +136,30 @@
 
   .msgOsDeleted {
     font-size: 1.5rem;
+  }
+}
+
+@media print {
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+  .os {
+    box-shadow: none;
+    margin: 0 auto;
+  }
+
+  .main__os {
+    padding: 0;
+  }
+
+  .main__title {
+    display: none;
+  }
+  .os__buttons {
+    display: none;
   }
 }

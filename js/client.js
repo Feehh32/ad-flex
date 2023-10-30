@@ -1,4 +1,5 @@
 import { clients, os } from "./main.js";
+console.log(os);
 
 const getClientFromId = () => {
   const paramsUrl = new URLSearchParams(window.location.search);
@@ -13,14 +14,14 @@ const clientId = getClientFromId();
 const client = findClientToId(clientId);
 const clientMainInformation = document.querySelector("[data-mainClient]");
 const osField = document.querySelector("[data-osField]");
-const filteredOs = os.filter((os) => os.client === client.nameClient);
+const filteredOs = os.filter((os) => os.client === client.name);
 
 if (client) {
   clientMainInformation.innerHTML = ` 
     <div class="client-header">
-    <h1 class="main__title" >${client.nameClient}</h1>
+    <h1 class="main__title" >${client.name}</h1>
     <a class="font-p-m-b color-0 "  href="./form_os.html?client=${
-      client.nameClient
+      client.name
     }">Inserir nova O.S</a>
     </div>
     <ul class="client-information " >
@@ -53,7 +54,7 @@ if (filteredOs.length > 0) {
     osField.innerHTML += `
         <li>
           <a href="./os_page.html?id=${os.id}&client=${os.client}"> 
-            <span class="font-r-l-b">${os.id}</span>
+            <span class="font-r-l-b">${os.code}</span>
             <p class="font-r-l-b">${os.date}</p>
           </a>
         </li>

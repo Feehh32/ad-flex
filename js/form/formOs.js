@@ -5,7 +5,7 @@ export const select = document.querySelector("[data-client]");
 let counter = 0;
 
 clients.forEach((client) => {
-  select.innerHTML += `<option value="${client.nameClient}">${client.nameClient}</option>`;
+  select.innerHTML += `<option value="${client.name}">${client.name}</option>`;
 });
 
 // adicionando o formulário de serviços

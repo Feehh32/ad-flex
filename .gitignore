@@ -1,1 +1,4 @@
 /node_modules
+server/node_modules
+ad-flex-database.db
+.vscode/launch.json

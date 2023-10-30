@@ -21,7 +21,7 @@ const handleForm = async (data) => {
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ os: data }),
     });
     if (!connection.ok) {
       throw new Error("Erro na requisição:" + connection.statusText);
@@ -69,18 +69,21 @@ const handleService = (e) => {
     year: "numeric",
   };
   const formattedDate = currentDate.toLocaleDateString("pt-BR", options);
+  const hideMeasure = e.target.querySelector("#hiddenMeasures").checked
+    ? "sim"
+    : "não";
 
   const listAnswers = {
     client: e.target.elements["client"].value,
     thickness: e.target.elements["thickness"].value,
     service: servicesArray,
     date: formattedDate,
-    hideMeasure: e.target.elements["hideMeasures"].value,
+    hideMeasure: hideMeasure,
     total: 0,
   };
 
   const clientCharge = clients.find(
-    (client) => client.nameClient === listAnswers.client
+    (client) => client.name === listAnswers.client
   );
 
   for (const service of listAnswers.service) {
@@ -102,7 +105,7 @@ const handleService = (e) => {
 formOs.addEventListener("submit", async (e) => {
   e.preventDefault();
   const data = handleService(e);
-  if (clients.some((client) => client.nameClient === data.client)) {
+  if (clients.some((client) => client.name === data.client)) {
     await handleForm(data);
     formOs.reset();
   } else {

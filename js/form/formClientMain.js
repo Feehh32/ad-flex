@@ -10,7 +10,7 @@ const collectingRegistration = async (formData) => {
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ clients: formData }),
     });
     if (!connection.ok) {
       throw new Error("Erro na requisição:" + connection.statusText);
@@ -82,7 +82,10 @@ if (clientIdForEdition) {
   );
 
   formField.forEach((field) => {
-    const fieldId = field.id;
+    let fieldId = field.id;
+    if (fieldId === "nameClient") {
+      fieldId = "name";
+    }
     field.value = clientEdit[fieldId];
   });
 }
@@ -93,7 +96,7 @@ formClients.addEventListener("submit", async (event) => {
   event.preventDefault();
   if (isEditing) {
     const updatedData = {
-      nameClient: event.target.elements["nameClient"].value,
+      name: event.target.elements["name"].value,
       email1: event.target.elements["email1"].value,
       email2: event.target.elements["email2"].value,
       tel1: event.target.elements["tel1"].value,
@@ -103,7 +106,7 @@ formClients.addEventListener("submit", async (event) => {
     await editingClients(clientIdForEdition, updatedData);
   } else {
     const data = {
-      nameClient: event.target.elements["nameClient"].value,
+      name: event.target.elements["name"].value,
       email1: event.target.elements["email1"].value,
       email2: event.target.elements["email2"].value,
       tel1: event.target.elements["tel1"].value,
@@ -111,10 +114,11 @@ formClients.addEventListener("submit", async (event) => {
       charge: parseFloat(event.target.elements["charge"].value),
       os: 0,
     };
+
     if (
       clients.some((client) => {
-        const noSpaceClient = client.nameClient.replace(/\s/g, "");
-        const noSpaceSearchClient = data.nameClient.replace(/\s/g, "");
+        const noSpaceClient = client.name.replace(/\s/g, "");
+        const noSpaceSearchClient = data.name.replace(/\s/g, "");
         return (
           noSpaceClient.toLowerCase() === noSpaceSearchClient.toLowerCase()
         );
