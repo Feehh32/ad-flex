@@ -49,4 +49,25 @@ db.serialize(() => {
   });
 });
 
+// Criando gatilho para a exclusão de notas de serviço quando o cliente ao qual ela referencia for excluido
+
+db.run(`
+  CREATE TRIGGER IF NOT EXISTS delete_clients_notes
+  AFTER DELETE ON clients
+  FOR EACH ROW
+  BEGIN
+  DELETE FROM service_notes WHERE client_id = OLD.id;
+  END;
+`);
+
+// Criando gatilho para a exclusão dos serviços que pertenciam as notas que foram excluidas com a exclusão dos clientes
+db.run(`
+  CREATE TRIGGER IF NOT EXISTS delete_service_details
+  AFTER DELETE ON service_notes
+  FOR EACH ROW
+  BEGIN
+  DELETE FROM  service_details WHERE note_id = OLD.id;
+  END;
+`);
+
 module.exports = db;

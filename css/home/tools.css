@@ -1,18 +1,19 @@
 .tools {
   width: 100%;
   bottom: 200px;
-  margin-top: 425px;
+  margin-top: 300px;
 }
 
 .tools__list {
   display: flex;
-  gap: 40px;
+  justify-content: center;
+  gap: 80px;
   overflow-x: auto;
 }
 
 .tools__list a {
-  width: 360px;
-  height: 150px;
+  width: 300px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -59,7 +59,6 @@ export const handleFormField = (field) => {
   field.setCustomValidity("");
 
   errorsType.forEach((error) => {
-    "";
     if (field.validity[error]) {
       msg = msgErrors[field.name][error];
     }

@@ -243,7 +243,6 @@ app.delete("/os/:id", (req, res) => {
 });
 
 // Consultando os serviços da nota de serviço
-
 app.get("/service_details/:noteId", (req, res) => {
   const noteId = req.params.noteId;
 
@@ -259,4 +258,15 @@ app.get("/service_details/:noteId", (req, res) => {
       res.json({ data: rows });
     }
   );
+});
+
+// Buscando todos os serviços
+app.get("/service_details", (req, res) => {
+  db.all("SELECT * FROM service_details", (err, rows) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    res.json({ data: rows });
+  });
 });

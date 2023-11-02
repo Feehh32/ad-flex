@@ -42,6 +42,7 @@ const filterClients = () => {
   return filteredClients;
 };
 
+// mostrar clientes
 const displayClients = (clients) => {
   clientsWrapper.innerHTML = "";
 
@@ -97,7 +98,7 @@ clientsWrapper.addEventListener("click", (event) => {
     const clientId = target.getAttribute("data-client-id");
 
     const userConfirm = window.confirm(
-      "Tem certeza que deseja apagar este cliente definitivamente."
+      "Excluir um cliente resultará na exclusão de todas as notas de serviço deste client. Tem certeza que deseja apagar este cliente definitivamente?"
     );
 
     if (userConfirm) {

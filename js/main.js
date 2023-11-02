@@ -28,7 +28,7 @@ const responseOs = await fetch(urlOs)
   });
 export const os = responseOs.os;
 
-// Fetch dos serviços da nota
+// Fetch do serviço da nota espeficicado pelo id
 
 export const urlServices = "http://localhost:3000/service_details";
 
@@ -44,3 +44,15 @@ export const handleServiceDetails = async (noteId) => {
   const service = responseService.data;
   return service;
 };
+
+// Fetch de todos os serviços da nota
+
+const responseService = await fetch(`${urlServices}`)
+  .then((resp) => resp.json())
+  .then((data) => {
+    return data;
+  })
+  .catch((error) => {
+    console.error("Erro ao buscar no servidor", error);
+  });
+export const serviceArray = responseService.data;

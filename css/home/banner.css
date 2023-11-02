@@ -1,7 +1,7 @@
 .banner {
   display: block;
   background: url("../../img/banner/banner.jpg");
-  height: 600px;
+  height: 450px;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
@@ -12,7 +12,7 @@
 
 @media (max-width: 800px) {
   .banner {
-    height: 400px;
+    height: 300px;
   }
 }
 
