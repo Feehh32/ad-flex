@@ -41,6 +41,10 @@
   color: var(--color-1);
 }
 
+.client-os {
+  padding: 120px 16px 88px 0;
+}
+
 .osSearch__wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -74,10 +78,6 @@
   bottom: 10px;
 }
 
-.client-os {
-  padding: 120px 16px 120px 0;
-}
-
 .client-os h2 {
   padding-bottom: 60px;
   color: var(--color-14);
@@ -102,6 +102,19 @@
 
 .client-os__list li a:hover {
   background-color: #f9f9f9f9;
+}
+
+.see-all__link {
+  display: block;
+  color: var(--color-prim3);
+  transition: all 0.3s ease-in;
+  text-align: center;
+  margin-top: 32px;
+  text-decoration: underline;
+}
+
+.see-all__link:hover {
+  color: var(--color-prim1);
 }
 
 @media (max-width: 800px) {
