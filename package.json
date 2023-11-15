@@ -2,8 +2,10 @@
   "name": "ad-flex---copia",
   "version": "1.0.0",
   "description": "",
-  "main": "electronMain.js",
+  "main": "./electronMain.js",
   "scripts": {
+    "prebuild": "node prebuild.js",
+    "build": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron electronMain.js"
   },
@@ -11,6 +13,32 @@
   "author": "Fernando Pereira",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^27.0.4"
+    "electron": "^27.1.0",
+    "electron-builder": "^24.6.4",
+    "sqlite3": "^5.1.6"
+  },
+  "build": {
+    "appId": "notes.controller.adflex",
+    "productName": "Notes Controller AD Flex",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "electronMain.js"
+    ],
+    "win": {
+      "icon": "build/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "asar": true
+  },
+  "dependencies": {
+    "electron-localshortcut": "^3.2.1"
   }
 }

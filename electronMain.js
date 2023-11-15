@@ -1,4 +1,5 @@
-const { app, BrowserWindow, Menu } = require("electron");
+const { app, BrowserWindow, Menu, nativeImage } = require("electron");
+const localShortcut = require("electron-localshortcut");
 const path = require("path");
 const serverStart = require("./server/server");
 
@@ -25,8 +26,10 @@ function createWindow() {
     },
   });
 
-  // const relativePath = path.join(__dirname, "../../form_client.html?editar=1");
-  // mainWindow.loadURL(`file://${relativePath}`);
+  const iconPath = path.join(__dirname, "icon.ico");
+  const image = nativeImage.createFromPath(iconPath);
+
+  mainWindow.setIcon(image);
 
   mainWindow.on("closed", function () {
     mainWindow = null;
@@ -34,7 +37,9 @@ function createWindow() {
 
   mainWindow.loadURL(`file://${path.join(__dirname, "index.html")}`);
   Menu.setApplicationMenu(null);
-  mainWindow.webContents.once("dom-ready", () => {
+  mainWindow.webContents.once("dom-ready", () => {});
+
+  localShortcut.register(mainWindow, "Ctrl+Shift+I", () => {
     mainWindow.webContents.openDevTools();
   });
 
