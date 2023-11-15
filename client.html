@@ -3,7 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self' http://localhost:3000">
     <link rel="icon" href="./favicon.ico" type="image/svg+xml">
     <title>AD flex | Clientes </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,12 +24,12 @@
 <body id="background">
     <header class="header-bg">
         <div class="header container">
-            <a href="./" class="header__logo">
+            <a href=index.html class="header__logo">
                 <img src="./img/Logo-colorida.svg" width="128" height="33" alt="AD Flex">
             </a>
             <nav aria-label="primaria">
                 <ul class="header__menu font-p-s-b color-0">
-                    <li><a href="./">Home</a></li>
+                    <li><a href=index.html>Home</a></li>
                     <li><a href="./clients.html">Clientes</a></li>
                     <li><a href="./form_client.html">Adicionar cliente</a></li>
                 </ul>

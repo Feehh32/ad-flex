@@ -16,10 +16,8 @@ const getClientFromName = () => {
 const clientFromUrl = getClientFromName();
 const osTitle = document.querySelector("[data-titleOs] span");
 const osWrapper = document.querySelector("[data-os]");
-const btn = document.querySelectorAll("[data-buttonOs]");
+export const btn = document.querySelectorAll("[data-buttonOs]");
 const mainTitle = document.querySelector("[data-titleOs]");
-const emptyPageOs = `<p class="font-r-xl color-3 msgOsDeleted">Sua nota de serviço foi excluida com sucesso!</p>
-<a href="./" class="font-r-m-b color-prim1 linkOsDeleted">voltar para a página principal</a>`;
 const filteredOs = os.find(
   (os) =>
     os.client === clientFromUrl.name && os.id === parseFloat(clientFromUrl.id)
@@ -48,10 +46,10 @@ btn.forEach((btn) => {
   if (btn.innerText.includes("EXCLUIR")) {
     btn.addEventListener("click", async () => {
       const userConfirm = window.confirm(
-        "Tem certeza que deseja apagar este cliente definitivamente."
+        "Tem certeza que deseja apagar esta OS definitivamente?"
       );
       if (userConfirm) {
-        await deleteOs(urlOs, filteredOs.id);
+        await deleteOs(urlOs, filteredOs.id, mainTitle, osWrapper, [btn]);
       }
     });
   }

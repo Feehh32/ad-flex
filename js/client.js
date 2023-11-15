@@ -146,7 +146,7 @@ if (client) {
     }</span></li>
     </ul>
     <span class="client__edit">
-    <a href="../../form_client.html?editar=${
+    <a href="form_client.html?editar=${
       client.id
     }" class="font-r-s color-4">editar Informações</a>
     </span>

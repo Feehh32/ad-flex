@@ -1,4 +1,4 @@
-import { os, serviceArray } from "./main.js";
+import { os, serviceArray, urlClients } from "./main.js";
 
 // Pegando o nome do cliente pela url
 const getClientFromName = () => {
@@ -12,8 +12,8 @@ const osWrapper = document.querySelector("[data-AllOsClient]");
 
 // Alterando a cor do cabeçalho de acordo com a url
 let urlPage = window.location.href;
-urlPage = urlPage.split("/")[3];
-if (urlPage === `all_os_for_client.html?name=${clientName}`) {
+
+if (urlPage.includes(clientName)) {
   document.querySelector("[data-header]").style.backgroundColor =
     "var(--color-10)";
 }

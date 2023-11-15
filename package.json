@@ -1,0 +1,16 @@
+{
+  "name": "ad-flex---copia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "electronMain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron electronMain.js"
+  },
+  "keywords": [],
+  "author": "Fernando Pereira",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^27.0.4"
+  }
+}

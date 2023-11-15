@@ -55,7 +55,7 @@ const editingClients = async (clientId, client) => {
     if (!response.ok) {
       throw new Error("Erro na requisição:" + response.statusText);
     } else {
-      window.location.href = `../../client.html?id=${clientId}`;
+      window.location.href = `client.html?id=${clientId}`;
       return response.json();
     }
   } catch (error) {
