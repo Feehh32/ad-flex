@@ -1,14 +1,17 @@
 const express = require("express");
-const db = require("./database.js");
-const cors = require("cors");
+const path = require("path");
+const { app: appElectron } = require("electron");
+
+const pathReceived = appElectron.getAppPath();
 const app = express();
+const dbPath = path.join(pathReceived, "database", "database.js");
+const db = require(dbPath);
 const port = 3000;
 
 function serverStart(electronApp) {
-  app.use(cors({ origin: "http://127.0.0.1:5500" }));
   app.use(express.json());
   app.listen(port, () => {
-    console.log(`Servidando rodando na porta ${port}`);
+    console.log(`Servidor rodando na porta ${port}`);
   });
 
   // buscando clientes no banco de dados
@@ -22,7 +25,7 @@ function serverStart(electronApp) {
   });
 
   // Inserir os dados do cliente no banco de dados
-  app.post("/clients", (req, res) => {
+  app.post("/clients", (req, res, next) => {
     const { name, email1, email2, tel1, tel2, charge } = req.body.clients;
 
     db.run(
@@ -30,11 +33,16 @@ function serverStart(electronApp) {
       [name, email1, email2, tel1, tel2, charge],
       function (err) {
         if (err) {
-          return res.status(500).json({ error: err.message });
+          return next(err);
         }
         res.json({ id: this.lastID });
       }
     );
+  });
+
+  app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send({ error: err.message });
   });
 
   // Atualizar os dados do cliente

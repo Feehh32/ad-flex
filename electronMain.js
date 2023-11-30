@@ -1,15 +1,12 @@
 const { app, BrowserWindow, Menu, nativeImage } = require("electron");
 const localShortcut = require("electron-localshortcut");
 const path = require("path");
-const serverStart = require("./server/server");
-
-app.commandLine.appendSwitch("disable-features", "OutOfBlinkCors");
+const serverStart = require("./server/server.js");
 
 app.on("web-contents-created", (event, contents) => {
   contents.on("will-attach-webview", (event, webPreferences, params) => {
-    // Desativar a segurança do Electron se a origem da página for diferente
     delete webPreferences.preload;
-    webPreferences.nodeIntegration = false;
+    webPreferences.nodeIntegration = true;
     webPreferences.worldSafeExecuteJavaScript = true;
     webPreferences.contextIsolation = true;
   });
@@ -23,6 +20,7 @@ function createWindow() {
     height: 870,
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false,
     },
   });
 
@@ -35,16 +33,16 @@ function createWindow() {
     mainWindow = null;
   });
 
-  mainWindow.loadURL(`file://${path.join(__dirname, "index.html")}`);
+  const indexPath = path.join(__dirname, "/pages", "/index.html");
+  mainWindow.loadFile(indexPath);
   Menu.setApplicationMenu(null);
-  mainWindow.webContents.once("dom-ready", () => {});
 
   localShortcut.register(mainWindow, "Ctrl+Shift+I", () => {
     mainWindow.webContents.openDevTools();
   });
 
-  mainWindow.on("closed", function () {
-    mainWindow = null;
+  process.on("uncaughtException", (error) => {
+    console.error("Uncaught Exception:", error);
   });
 
   serverStart(app);

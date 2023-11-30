@@ -20,7 +20,8 @@ export const btn = document.querySelectorAll("[data-buttonOs]");
 const mainTitle = document.querySelector("[data-titleOs]");
 const filteredOs = os.find(
   (os) =>
-    os.client === clientFromUrl.name && os.id === parseFloat(clientFromUrl.id)
+    os.client.trim() === clientFromUrl.name.trim() &&
+    os.id === parseInt(clientFromUrl.id)
 );
 
 let service = "";
@@ -66,7 +67,7 @@ if (filteredOs) {
   osWrapper.innerHTML = `
       <div class="os__header">
       <div class="os__logo--container">
-          <img class="os__logo" src="./img/icones/logo-os.svg" width="100" height="32"
+          <img class="os__logo" src="../img/icones/logo-os.svg" width="100" height="32"
               alt="Logo da ordem de serviço">
       </div>
       <h2 class="os__title font-os-xl-b">Ordem de serviço</h2>
@@ -131,7 +132,8 @@ if (filteredOs) {
   mainTitle.innerHTML = "";
   osWrapper.style.backgroundColor = "transparent";
   osWrapper.style.boxShadow = "none";
-  osWrapper.innerHTML = emptyPageOs;
+  osWrapper.innerHTML = `<p class="font-r-xl color-3 msgOsDeleted">Sua nota de serviço foi excluida com sucesso!</p>
+  <a href=index.html class="font-r-m-b color-prim1 linkOsDeleted">voltar para a página principal</a>`;
   btn.forEach((btn) => {
     btn.style.display = "none";
   });

@@ -1,5 +1,5 @@
 {
-  "name": "ad-flex-servidor",
+  "name": "ad-flex-server",
   "version": "1.0.0",
   "description": "adFlex server",
   "main": "server.js",
@@ -10,7 +10,6 @@
   "author": "Fernando Pereira",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.18.2",
     "sqlite3": "^5.1.6"
   }

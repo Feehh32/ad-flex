@@ -1,10 +1,9 @@
 {
-  "name": "ad-flex---copia",
+  "name": "ad-flex",
   "version": "1.0.0",
-  "description": "",
-  "main": "./electronMain.js",
+  "description": "a desktop app to create service notes from your flexographic services",
+  "main": "electronMain.js",
   "scripts": {
-    "prebuild": "node prebuild.js",
     "build": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron electronMain.js"
@@ -14,22 +13,27 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^27.1.0",
-    "electron-builder": "^24.6.4",
-    "sqlite3": "^5.1.6"
+    "electron-builder": "^24.6.4"
   },
   "build": {
-    "appId": "notes.controller.adflex",
-    "productName": "Notes Controller AD Flex",
+    "appId": "adflex",
+    "productName": "AD-Flex",
     "directories": {
       "output": "build"
     },
     "files": [
       "dist/**/*",
       "node_modules/**/*",
-      "electronMain.js"
+      "electronMain.js",
+      "server/**/*",
+      "database/**/*",
+      "pages/**/*",
+      "css/**/*",
+      "js/**/*",
+      "img/**/*"
     ],
     "win": {
-      "icon": "build/icons/icon.ico"
+      "icon": "./img/logo-grande.ico"
     },
     "nsis": {
       "oneClick": false,
@@ -39,6 +43,9 @@
     "asar": true
   },
   "dependencies": {
-    "electron-localshortcut": "^3.2.1"
+    "electron-localshortcut": "^3.2.1",
+    "electron-log": "^5.0.1",
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6"
   }
 }

@@ -1,6 +1,17 @@
-const sqlite3 = require("sqlite3").verbose();
+const sqlite = require("sqlite3").verbose();
+const { app } = require("electron");
+const path = require("path");
+const fs = require("fs");
 
-const db = new sqlite3.Database("ad-flex-database.db");
+const appPath = app.getPath("userData");
+const dbPath = path.join(appPath, "database.db");
+
+if (!fs.existsSync(dbPath)) {
+  const initialDbPath = path.join(app.getAppPath(), "database", "database.db");
+  fs.copyFileSync(initialDbPath, dbPath);
+}
+
+const db = new sqlite.Database(dbPath);
 
 db.serialize(() => {
   db.run(`

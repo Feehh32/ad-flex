@@ -12,6 +12,7 @@ const collectingRegistration = async (formData) => {
       },
       body: JSON.stringify({ clients: formData }),
     });
+    console.log(formData);
     if (!connection.ok) {
       throw new Error("Erro na requisição:" + connection.statusText);
     }

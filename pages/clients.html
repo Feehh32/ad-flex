@@ -13,8 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/os_page/os_page.css" media="print">
+    <link rel="stylesheet" href="../css/style.css">
+
     <script>
         document.documentElement.classList.add('js')
     </script>
@@ -24,7 +24,7 @@
     <header class="header-bg">
         <div class="header container">
             <a href=index.html class="header__logo">
-                <img src="./img/Logo-colorida.svg" width="128" height="33" alt="AD Flex">
+                <img src="../img/Logo-colorida.svg" width="128" height="33" alt="AD Flex">
             </a>
             <nav aria-label="primaria">
                 <ul class="header__menu font-p-s-b color-0">
@@ -35,31 +35,27 @@
             </nav>
         </div>
     </header>
-    <main class="container main__os">
-        <div>
-            <h1 class="main__title color-0 fadeInLeft" data-anime="200" data-titleOs>Notas de serviço
-                <span>001</span><span class="color-prim2">.</span>
-            </h1>
+    <main class="main container">
+        <div class="main__search fadeInDown" data-anime="200">
+            <label class="font-p-m-b color-5" for="search">Pesquisar um cliente:</label>
+            <input type="search" id="search" class="searchClient" data-search>
         </div>
-        <article class="os fadeInUp" data-anime="400" data-os>
-        </article>
-        <div class="os__buttons">
-            <button type="button" class="btn" data-buttonOs>Imprimir</button>
-            <button type="button" class="btn" data-buttonOs>Excluir</button>
-        </div>
+        <span class="font-p-s-b fadeInLeft hidden" data-msg>mensagem de erro</span>
+        <section class="main__clients fadeInDown" aria-label="Clientes" data-anime="400" data-clients>
+        </section>
     </main>
     <footer class="footer">
         <div class="footer__wrapper container">
-            <img src="./img/Logo-colorida.svg" width="128" height="33" alt="logo da AD Flex">
+            <img src="../img/Logo-colorida.svg" width="128" height="33" alt="logo da AD Flex">
             <h4 class="font-p-m-b color-0">Contato:</h4>
             <span class="font-r-xs color-3">Desenvolvido por Fernando Pereira - Alguns direitos reservados.</span>
             <p class="font-r-l color-3">adm.xavier@hotmail.com</p>
             <p class="font-r-l color-3">(11) 94285-8422</p>
         </div>
     </footer>
-    <script src="./js/plugin/simple-anime.js"></script>
-    <script src="js/main.js" type="module"></script>
-    <script src="js/osPage/os_page.js" type="module"></script>
+    <script src="../js/plugin/simple-anime.js"></script>
+    <script src="../js/main.js" type="module"></script>
+    <script type="module" src="../js/clientsPage.js"></script>
 </body>
 
 </html>

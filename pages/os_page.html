@@ -7,23 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self' http://localhost:3000">
-    <title> AD flex | Início </title>
+    <title>AD flex | Clientes </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Poppins:wght@500;600&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/os_page/os_page.css" media="print">
     <script>
         document.documentElement.classList.add('js')
     </script>
 </head>
 
-<body style="background: #27282b;">
+<body id="background">
     <header class="header-bg">
         <div class="header container">
             <a href=index.html class="header__logo">
-                <img src="./img/Logo-colorida.svg" width="128" height="33" alt="AD Flex">
+                <img src="../img/Logo-colorida.svg" width="128" height="33" alt="AD Flex">
             </a>
             <nav aria-label="primaria">
                 <ul class="header__menu font-p-s-b color-0">
@@ -34,38 +35,31 @@
             </nav>
         </div>
     </header>
-    <main class="tools container">
-        <ul class="tools__list fadeInDown" data-anime="400">
-            <li class="tools__item">
-                <a href="./form_os.html" class="font-p-s-b color-prim5">Gerar Nova O.S</a>
-            </li>
-            <li class="tools__item">
-                <a href="./clients.html" class="font-p-s-b color-prim5">Ver todos os clientes</a>
-            </li>
-            <li class="tools__item">
-                <a href="./form_client.html" class="font-p-s-b color-prim5">Adicionar novo cliente</a>
-            </li>
-        </ul>
-    </main>
-    <span class="banner fadeInDown" data-anime="200">
-    </span>
-    <article class="clients container">
-        <h1 class="font-p-xl-b color-0 main__title">Principais Clientes<span class="color-prim2">.</span></h1>
-        <div class="clients__wrapper" data-wrapper>
+    <main class="container main__os">
+        <div>
+            <h1 class="main__title color-0 fadeInLeft" data-anime="200" data-titleOs>Notas de serviço
+                <span>001</span><span class="color-prim2">.</span>
+            </h1>
         </div>
-    </article>
+        <article class="os fadeInUp" data-anime="400" data-os>
+        </article>
+        <div class="os__buttons">
+            <button type="button" class="btn" data-buttonOs>Imprimir</button>
+            <button type="button" class="btn" data-buttonOs>Excluir</button>
+        </div>
+    </main>
     <footer class="footer">
         <div class="footer__wrapper container">
-            <img src="./img/Logo-colorida.svg" width="128" height="33" alt="logo da AD Flex">
+            <img src="../img/Logo-colorida.svg" width="128" height="33" alt="logo da AD Flex">
             <h4 class="font-p-m-b color-0">Contato:</h4>
             <span class="font-r-xs color-3">Desenvolvido por Fernando Pereira - Alguns direitos reservados.</span>
             <p class="font-r-l color-3">adm.xavier@hotmail.com</p>
             <p class="font-r-l color-3">(11) 94285-8422</p>
         </div>
     </footer>
-    <script src="./js/plugin/simple-anime.js"></script>
-    <script src="js/main.js" type="module"></script>
-    <script type="module" src="./js/index.js"></script>
+    <script src="../js/plugin/simple-anime.js"></script>
+    <script src="../js/main.js" type="module"></script>
+    <script src="../js/osPage/os_page.js" type="module"></script>
 </body>
 
 </html>
