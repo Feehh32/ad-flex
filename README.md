@@ -1,4 +1,4 @@
-<img src="./img/banner/banner-ad-flex.png" alt="Banner com o logo do Ad-flex">
+<img src="./img/banner/banner_adflex.jpg" alt="Banner com o logo do Ad-flex">
 <br></br>
 
 ![Status](https://img.shields.io/badge/status-complete-green)
