@@ -72,6 +72,14 @@ $ npm run build
 
 <br></br>
 
+<h2 style="color:#f9f9f9;"> 📥 Baixando a aplicação</h2>
+
+<br></br>
+
+Você pode baixar a aplicação [aqui](https://drive.google.com/drive/folders/1Nio8iCP_dFxwgjrHWoCaunt4xyzMKCMl?usp=sharing).
+
+<br></br>
+
 <h1 style="color:#f9f9f9;">📝 Licença </h1>
 
 <br></br>
